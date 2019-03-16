@@ -1,3 +1,10 @@
+/*
+popen2 from
+
+	https://emergent.unpythonic.net/01108826729
+
+*/
+
 #include <sys/types.h>
 #include <unistd.h>
 
