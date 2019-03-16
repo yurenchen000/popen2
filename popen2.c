@@ -23,8 +23,8 @@ int popen2(const char *cmdline, struct popen2 *childinfo) {
 	if(pipe(pipe_stdin)) return -1;
 	if(pipe(pipe_stdout)) return -1;
 
-	printf("pipe_stdin[0] = %d, pipe_stdin[1] = %d\n", pipe_stdin[0], pipe_stdin[1]);
-	printf("pipe_stdout[0] = %d, pipe_stdout[1] = %d\n", pipe_stdout[0], pipe_stdout[1]);
+	//printf("pipe_stdin[0] = %d, pipe_stdin[1] = %d\n", pipe_stdin[0], pipe_stdin[1]);
+	//printf("pipe_stdout[0] = %d, pipe_stdout[1] = %d\n", pipe_stdout[0], pipe_stdout[1]);
 
 	p = fork();
 	if(p < 0) return p; /* Fork failed */
@@ -57,8 +57,8 @@ int popen2ve(const char *filename, char *const argv[], char *const envp[],
 	if(pipe2(pipe_stdin, O_CLOEXEC)) return -1;
 	if(pipe2(pipe_stdout, O_CLOEXEC)) return -1;
 
-	printf("pipe_stdin[0] = %d, pipe_stdin[1] = %d\n", pipe_stdin[0], pipe_stdin[1]);
-	printf("pipe_stdout[0] = %d, pipe_stdout[1] = %d\n", pipe_stdout[0], pipe_stdout[1]);
+	//printf("pipe_stdin[0] = %d, pipe_stdin[1] = %d\n", pipe_stdin[0], pipe_stdin[1]);
+	//printf("pipe_stdout[0] = %d, pipe_stdout[1] = %d\n", pipe_stdout[0], pipe_stdout[1]);
 
 	p = fork();
 	if(p < 0) return p; /* Fork failed */
